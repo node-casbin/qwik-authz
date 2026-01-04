@@ -119,7 +119,7 @@ export function authz(options: AuthzOptions) {
     const enforcer = await Promise.resolve(options.newEnforcer);
 
     if (!(enforcer instanceof Enforcer)) {
-      throw new Error('Invalid enforcer provided to authz middleware');
+      throw new Error('Invalid enforcer: expected Casbin Enforcer instance');
     }
 
     // Create or use provided authorizer

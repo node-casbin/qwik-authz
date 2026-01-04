@@ -317,7 +317,7 @@ describe('Qwik Authz Middleware', () => {
 
       const middleware = authz({ newEnforcer: {} as any });
 
-      await expect(middleware(event)).rejects.toThrow('Invalid enforcer');
+      await expect(middleware(event)).rejects.toThrow('Invalid enforcer: expected Casbin Enforcer instance');
     });
   });
 });
