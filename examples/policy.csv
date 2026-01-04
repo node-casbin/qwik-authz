@@ -1,0 +1,6 @@
+p, alice, /dataset1/*, GET
+p, alice, /dataset1/resource1, POST
+p, bob, /dataset2/*, *
+p, admin, /*, *
+
+g, alice, admin
